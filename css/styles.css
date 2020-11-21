@@ -80,6 +80,11 @@ h2{
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
 }
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
 
 @media (min-width: 768px) {
     .lista-productos{
@@ -88,19 +93,21 @@ h2{
 }
 
 .boton{
-    background-color: #ffce00;
-    display: inline-block;
-    padding: 10px 40px;
-    margin-top: 10px;
+    background-color:var(--secundario);
+    padding: 1.5rem 40px;
+    font-family: var(--fuentePrincipal);
     text-decoration: none;
     color: #ffffff;
     text-transform: uppercase;
     font-weight: bold;
     transition: backgroud-color .3s ease-in-out;
+    border: none;
+    grid-column: 1 / 4;
 }
 
 .boton:hover{
     background-color: #ebbc00;
+    cursor: pointer;
 }
 
 .producto{
@@ -150,4 +157,45 @@ h2{
         grid-column: 2 / 4;
         grid-row: 5 / 6;
     }    
+}
+
+
+@media (min-width: 768px) {
+    .contenedor-informacion{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+    }
+}
+
+
+footer{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 2.2rem;
+    font-family: var(--fuentePrincipal);
+    margin-top: 3rem;
+}
+
+.formulario-pedido{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.campo{
+    background-color: transparent;
+    border: solid #ffffff;
+    font-family: var(--fuentePrincipal);
+    font-size: 2.2rem;
+    padding: 1rem;
+    width: 100%;
+    color: #ffffff;
+}
+
+.talla{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    grid-column: 1 / 3;
 }
